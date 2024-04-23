@@ -33,3 +33,21 @@ body {
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move only half the total content width */
+  }
+}
+
+.scrolling-container {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  animation: scroll 60s linear infinite;
+  gap: 30px; /* Spacing between cards */
+}
+
+
