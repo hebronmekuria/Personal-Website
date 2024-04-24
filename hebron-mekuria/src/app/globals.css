@@ -46,8 +46,20 @@ body {
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
-  animation: scroll 60s linear infinite;
+  animation: scroll 20s linear infinite;
   gap: 30px; /* Spacing between cards */
 }
 
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust as needed for desired effect */
+  }
+}
 
+
+.basic-card-bobbing {
+  animation: bobbing 3s ease-in-out infinite; /* Adjust timing as needed */
+}
