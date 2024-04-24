@@ -13,9 +13,9 @@ import { TracingBeam } from "./components/ui/tracing-beam";
 import { ProjectCard } from "./components/ProjectCard";
 import profile from "./static/profile.png";
 import github from "./static/github.png";
+import linkedin from './static/linkedin.png';
+import email from './static/email.png';
 import Image from "next/image";
-import { Vortex } from "./components/ui/vortex";
-import { VortexDemo } from "./components/VortexDemo";
 import { SimpleGrid } from '@chakra-ui/react'
 
 export default function Home() {
@@ -46,7 +46,11 @@ export default function Home() {
               </VStack>
               <VStack>
                 <TextCard />
-                <Image src={github} width={"100"} height={"100"} alt="" />
+                <HStack>
+                <Image src={github} width={"70"} height={"70"} alt=""/>
+                <Image src={linkedin} width={"70"} height={"70"}  alt="" />
+                <Image src={email} width={"70"} height={"70"}  alt="" />
+                </HStack>
               </VStack>
             </HStack>
 
