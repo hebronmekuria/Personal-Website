@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button, VStack } from "@chakra-ui/react";
+import { Box, Text, Button, VStack, HStack } from "@chakra-ui/react";
 
 export function BasicCard({ title = "Professional Experiences", subtitle = "Past internships and jobs", buttonUrl = "#" }) {
   return (
@@ -8,6 +8,7 @@ export function BasicCard({ title = "Professional Experiences", subtitle = "Past
       h="328px"
       borderWidth="1px"
       borderRadius='40'
+      borderColor='#9A5CCB'
       shadow="md"
       bg="white"
       ms='29px'
@@ -36,24 +37,27 @@ export function BasicCard({ title = "Professional Experiences", subtitle = "Past
           ms='24px'
           me='24px'
         ></Box>
-
-        <Text fontSize="20px" fontWeight="medium" h='28px' mb='20px' ms='33px' me='10px'>
-          {title} {/* Use title prop */}
+        
+        <VStack align='start' w='227px' ms='33px' overflow='hidden' >
+        <Text fontSize="20px" fontWeight="medium"  me='10px' w='220px' textAlign="left"  overflowWrap="break-word" >
+          {title} 
         </Text>
-        <Text fontSize="20px" color="gray.500" opacity='0.44px' h='22px' mb='4px' ms='33px' me='3px' fontWeight='medium'>
-          {subtitle} {/* Use subtitle prop */}
+        <Text fontSize="20px" color="gray.500" opacity='0.44px' fontWeight='medium' w='220px' overflowWrap="break-word" >
+          {subtitle} 
         </Text>
+        </VStack>
         <Button
+          textColor='white'
           as="a"
-          href={buttonUrl} // Use buttonUrl prop
-          colorScheme="purple"
+          href={buttonUrl}
+          bg="#9A5CCB"
           borderRadius='3xl'
           w='94px'
           h='39px'
           ms='141px'
-          me='28px'
-          mb='51px'
           target="_blank" // Optionally open in new tab
+          position="absolute"
+          bottom="12px" 
         >
           View
         </Button>
