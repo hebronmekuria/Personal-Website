@@ -2,7 +2,6 @@ import {
   Box,
   ChakraProvider,
   Heading,
-  Image,
   Img,
   Text,
   VStack,
@@ -13,18 +12,19 @@ import { TextCard } from "./components/TextCard";
 import { TracingBeam } from "./components/ui/tracing-beam";
 import { ProjectCard } from "./components/ProjectCard";
 import profile from "./static/profile.png";
+import github from "./static/github.png";
+import Image from "next/image";
 import { Vortex } from "./components/ui/vortex";
 import { VortexDemo } from "./components/VortexDemo";
 
 export default function Home() {
   return (
     <ChakraProvider>
-      
-      <Box alignContent='center'>
+      <Box alignContent="center">
         <TracingBeam className="px-6">
           <Box w="full" minH="100vh">
             <HStack spacing="24px">
-              <VStack spacing="5" minW="350px" me='100px'>
+              <VStack spacing="5" minW="350px" me="100px">
                 <Heading
                   mt="30px"
                   as="h1"
@@ -37,19 +37,15 @@ export default function Home() {
                   {" "}
                   Back-End and Full-Stack Developer
                 </Text>
-                <Img
-                  borderRadius="full"
-                  mt="20px"
-                  boxSize="300px"
+                <Image
+                  className="rounded-full mt-20 h-300 w-300"
                   src={profile}
                   alt="Hebron Mekuria"
                 />
               </VStack>
               <VStack>
-              <TextCard/>
-              <Image
-              src='Personal-Website/hebron-mekuria/src/app/static/github.png'
-              alt=''/>
+                <TextCard />
+                <Image src={github} width={"100"} height={"100"} alt="" />
               </VStack>
             </HStack>
 
@@ -80,11 +76,10 @@ export default function Home() {
             <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
               Projects
             </Heading>
-            
+
             <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>
             <ProjectCard></ProjectCard>
-           
           </Box>
           <Box w="full" minH="100vh">
             <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
@@ -98,7 +93,6 @@ export default function Home() {
           </Box>
         </TracingBeam>
       </Box>
-     
     </ChakraProvider>
   );
 }
