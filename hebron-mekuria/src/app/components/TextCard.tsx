@@ -10,6 +10,7 @@ export function TextCard({header='Welcome  👋 ', content='I am an incoming S
       borderRadius='40'
       shadow="md"
       bg="white"
+      borderColor='#9A5CCB'
       ms='29px'
       color='#000000'
       mt='50px'
