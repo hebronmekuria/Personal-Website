@@ -38,7 +38,7 @@ export default function Home() {
                   Back-End and Full-Stack Developer
                 </Text>
                 <Image
-                  className="rounded-full mt-20 h-300 w-300"
+                  className="rounded-full mt-20 w-[300px] h-[300px]"
                   src={profile}
                   alt="Hebron Mekuria"
                 />
