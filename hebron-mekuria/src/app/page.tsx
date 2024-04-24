@@ -41,7 +41,7 @@ export default function Home() {
                   borderRadius="full"
                   mt="20px"
                   boxSize="300px"
-                  src='https://bit.ly/dan-abramov'
+                  src={profile}
                   alt="Hebron Mekuria"
                 />
               </VStack>
@@ -49,7 +49,7 @@ export default function Home() {
               <TextCard/>
               <Image
               src='Personal-Website/hebron-mekuria/src/app/static/github.png'
-              alt='github-icon'/>
+              alt=''/>
               </VStack>
             </HStack>
 
@@ -80,6 +80,11 @@ export default function Home() {
             <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
               Projects
             </Heading>
+            
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+           
           </Box>
           <Box w="full" minH="100vh">
             <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
@@ -89,7 +94,6 @@ export default function Home() {
           <Box w="full" minH="100vh">
             <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
               Skills
-              
             </Heading>
           </Box>
         </TracingBeam>
