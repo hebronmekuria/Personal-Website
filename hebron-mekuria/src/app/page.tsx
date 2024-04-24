@@ -45,7 +45,12 @@ export default function Home() {
                   alt="Hebron Mekuria"
                 />
               </VStack>
+              <VStack>
               <TextCard/>
+              <Image
+              src='Personal-Website/hebron-mekuria/src/app/static/github.png'
+              alt='github-icon'/>
+              </VStack>
             </HStack>
 
             <HStack className="basic-card-bobbing" w="500px">
