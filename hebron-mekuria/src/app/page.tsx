@@ -15,6 +15,7 @@ import { ProjectCard } from "./components/ProjectCard";
 import profile from "./static/profile.png";
 import { Vortex } from "./components/ui/vortex";
 import { VortexDemo } from "./components/VortexDemo";
+import { SimpleGrid } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
             <HStack spacing="24px">
               <VStack spacing="5" minW="350px" me='100px'>
                 <Heading
-                  mt="30px"
+                   m='30px'
                   as="h1"
                   color="#9A5CCB"
                   fontWeight="semibold"
@@ -41,7 +42,7 @@ export default function Home() {
                   borderRadius="full"
                   mt="20px"
                   boxSize="300px"
-                  src={profile}
+                  src=''
                   alt="Hebron Mekuria"
                 />
               </VStack>
@@ -77,22 +78,25 @@ export default function Home() {
             </HStack>
           </Box>
           <Box w="full" minH="100vh">
-            <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
+            <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold" m='30px'>
               Projects
             </Heading>
-            
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
-            <ProjectCard></ProjectCard>
            
+            <SimpleGrid columns={2} >
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            <ProjectCard></ProjectCard>
+            </SimpleGrid>
+            
           </Box>
           <Box w="full" minH="100vh">
-            <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
+            <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold" m='30px'>
               Professional Experiences
             </Heading>
           </Box>
           <Box w="full" minH="100vh">
-            <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold">
+            <Heading mt="30px" as="h1" color="#9A5CCB" fontWeight="semibold"  m='30px'>
               Skills
             </Heading>
           </Box>
