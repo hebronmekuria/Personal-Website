@@ -40,11 +40,14 @@ export function BasicCard({
           overflow="hidden"
           opacity="0.85"
           w="130px"
-          h="130px"
+          h="123px"
           shadow="lg"
           mb="12px"
           ms="24px"
           me="24px"
+          display="flex"       
+          alignItems="center"  
+          justifyContent="center" 
         >
           <Image width={100} height={100} src={image} alt='img' />
         </Box>

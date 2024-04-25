@@ -48,7 +48,10 @@ import linux from "./static/technologies/linux.png";
 import postman from "./static/technologies/postman.svg";
 import rest from "./static/technologies/rest.png";
 
-import professional from './static/professional.png';
+import professional from "./static/professional.png";
+import projects from "./static/projects.png";
+import skills from "./static/skills.png";
+import education from "./static/education.png";
 
 export default function Home() {
   return (
@@ -92,19 +95,19 @@ export default function Home() {
                 title="Projects"
                 subtitle="Compilation of my coding projects."
                 buttonUrl="https://example.com"
-                image={professional}
+                image={projects}
               />
               <BasicCard
                 title="Skills"
                 subtitle="List of my technical and non-technical skills."
                 buttonUrl="https://example.com"
-                image={professional}
+                image={skills}
               />
               <BasicCard
                 title="Education"
                 subtitle="My undergraduate degree, activities and courses."
                 buttonUrl="https://example.com"
-                image={professional}
+                image={education}
               />
             </HStack>
           </Box>
@@ -199,16 +202,16 @@ export default function Home() {
             >
               Other Tools and Technologies
             </Heading>
-            <SimpleGrid  columns={3} spacingX={150}>
-            <SkillsCard icon={android} label="Android Studio" />
-            <SkillsCard icon={api} label="API Design" />
-            <SkillsCard icon={azure} label="Microsoft Azure" />
-            <SkillsCard icon={git} label="Git" />
-            <SkillsCard icon={jira} label="Jira" />
-            <SkillsCard icon={kysely} label="Kysely SQL Builder" />
-            <SkillsCard icon={linux} label="Linux" />
-            <SkillsCard icon={postman} label="Postman" />
-            <SkillsCard icon={rest} label="RESTful Services" />
+            <SimpleGrid columns={3} spacingX={150}>
+              <SkillsCard icon={android} label="Android Studio" />
+              <SkillsCard icon={api} label="API Design" />
+              <SkillsCard icon={azure} label="Microsoft Azure" />
+              <SkillsCard icon={git} label="Git" />
+              <SkillsCard icon={jira} label="Jira" />
+              <SkillsCard icon={kysely} label="Kysely SQL Builder" />
+              <SkillsCard icon={linux} label="Linux" />
+              <SkillsCard icon={postman} label="Postman" />
+              <SkillsCard icon={rest} label="RESTful Services" />
             </SimpleGrid>
           </Box>
         </TracingBeam>
