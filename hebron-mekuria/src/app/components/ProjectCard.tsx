@@ -10,8 +10,8 @@ export function ProjectCard({
 }) {
   return (
     <Box
-      w="398px"
-      h="344px"
+      w="500px"
+      h="350px"
       borderWidth="1px"
       borderRadius="40"
       shadow="md"
