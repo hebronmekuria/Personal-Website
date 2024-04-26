@@ -3,6 +3,7 @@ import {
   ChakraProvider,
   Heading,
   Img,
+  Divider,
   Text,
   VStack,
   HStack,
@@ -52,6 +53,7 @@ import professional from "./static/professional.png";
 import projects from "./static/projects.png";
 import skills from "./static/skills.png";
 import education from "./static/education.png";
+import { TextBlock } from "./components/TextBlock";
 
 export default function Home() {
   return (
@@ -88,25 +90,25 @@ export default function Home() {
               <BasicCard
                 title="Professional Experience"
                 subtitle="Past internships and jobs."
-                buttonUrl="https://example.com"
+                buttonUrl="#professional"
                 image={professional}
               />
               <BasicCard
                 title="Projects"
                 subtitle="Compilation of my coding projects."
-                buttonUrl="https://example.com"
+                buttonUrl="projects"
                 image={projects}
               />
               <BasicCard
                 title="Skills"
                 subtitle="List of my technical and non-technical skills."
-                buttonUrl="https://example.com"
+                buttonUrl="skills"
                 image={skills}
               />
               <BasicCard
                 title="Education"
                 subtitle="My undergraduate degree, activities and courses."
-                buttonUrl="https://example.com"
+                buttonUrl="education"
                 image={education}
               />
             </HStack>
@@ -118,6 +120,7 @@ export default function Home() {
               color="#9A5CCB"
               fontWeight="semibold"
               m="30px"
+              id="projects"
             >
               Projects
             </Heading>
@@ -136,9 +139,14 @@ export default function Home() {
               color="#9A5CCB"
               fontWeight="semibold"
               m="30px"
+              id="'professional"
             >
               Professional Experiences
             </Heading>
+            <TextBlock />
+            <TextBlock />
+            <TextBlock />
+            <TextBlock />
           </Box>
           <Box w="full" minH="100vh">
             <Heading
@@ -147,6 +155,7 @@ export default function Home() {
               color="#9A5CCB"
               fontWeight="semibold"
               m="30px"
+              id="skills"
             >
               Skills
             </Heading>
@@ -213,6 +222,18 @@ export default function Home() {
               <SkillsCard icon={postman} label="Postman" />
               <SkillsCard icon={rest} label="RESTful Services" />
             </SimpleGrid>
+          </Box>
+          <Box w="full" minH="100vh">
+            <Heading
+              mt="30px"
+              as="h1"
+              color="#9A5CCB"
+              fontWeight="semibold"
+              m="30px"
+              id="education"
+            >
+              Education
+            </Heading>
           </Box>
         </TracingBeam>
       </Box>

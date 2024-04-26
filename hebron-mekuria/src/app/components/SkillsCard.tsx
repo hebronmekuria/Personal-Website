@@ -49,7 +49,7 @@ export function SkillsCard( { icon, label }: SkillsCardProps) {
           layout="fixed"
         />
         </Box>
-        <Text fontSize='32px' top='30px' w='220px' alignSelf='center'>{label}</Text>
+        <Text fontSize='20px' top='30px' w='220px' alignSelf='center'>{label}</Text>
       </VStack>
     </Box>
   );
