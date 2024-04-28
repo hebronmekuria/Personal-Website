@@ -54,6 +54,7 @@ import projects from "./static/projects.png";
 import skills from "./static/skills.png";
 import education from "./static/education.png";
 import { TextBlock } from "./components/TextBlock";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -79,9 +80,17 @@ export default function Home() {
               <VStack>
                 <TextCard />
                 <HStack>
-                  <Image src={github} width={"70"} height={"70"} alt="" />
-                  <Image src={linkedin} width={"70"} height={"70"} alt="" />
-                  <Image src={email} width={"70"} height={"70"} alt="" />
+                <HStack>
+                  <a href="https://github.com/hebronmekuria" target="_blank" rel="noopener noreferrer">
+                    <Image src={github} width={"70"} height={"70"} alt="GitHub" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/hebron-mekuria" target="_blank" rel="noopener noreferrer">
+                    <Image src={linkedin} width={"70"} height={"70"} alt="LinkedIn" />
+                  </a>
+                  <a href="mailto:hebron.mekuria@emu.edu">
+                    <Image src={email} width={"70"} height={"70"} alt="Email" />
+                  </a>
+                </HStack>
                 </HStack>
               </VStack>
             </HStack>
