@@ -39,7 +39,8 @@ export function SkillsCard( { icon, label }: SkillsCardProps) {
         shadow: "2xl", // Enhances the shadow to make it more prominent
       }}
     >
-      <VStack  spacing={10}>
+      <VStack  >
+      <Text m='15px' fontSize='20px' top='30px' w='220px' alignSelf='center'>{label}</Text>
         <Box mt='20px'>
         <Image
           src={icon}
@@ -49,7 +50,7 @@ export function SkillsCard( { icon, label }: SkillsCardProps) {
           layout="fixed"
         />
         </Box>
-        <Text fontSize='20px' top='30px' w='220px' alignSelf='center'>{label}</Text>
+        
       </VStack>
     </Box>
   );
