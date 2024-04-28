@@ -175,9 +175,12 @@ export default function Home() {
 
             <SimpleGrid columns={2} spacingX={200}>
               <ProjectCard></ProjectCard>
-              <ProjectCard></ProjectCard>
-              <ProjectCard></ProjectCard>
-              <ProjectCard></ProjectCard>
+              <ProjectCard header="oyster" subtitle="Colorstack open-source software"></ProjectCard>
+              <ProjectCard header="Internet Hospital"
+              subtitle='A virtual doctor at your fingertips!'></ProjectCard>
+              <ProjectCard header="Pantry Puzzle" subtitle="Let's reduce food waste using AI!"></ProjectCard>
+              <ProjectCard header="Major to Career Converter" subtitle="Find out what job you can land with any given college major!"></ProjectCard>
+              <ProjectCard header="Social Distancing Alarm" subtitle="Stay six-feet apart with this small alarm!"></ProjectCard>
             </SimpleGrid>
           </Box>
           <Box w="full" minH="100vh">
