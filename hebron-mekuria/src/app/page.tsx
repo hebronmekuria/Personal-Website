@@ -193,11 +193,11 @@ export default function Home() {
               id="'professional"
             >
               Professional Experiences
-            </Heading>
+            </Heading >
+            <TextBlock company='Colorstack' role='Open-Source Contributor' date='Mar 2023 - Present' location='remote'/>
+            <TextBlock company="Vistashare" role='Software Engineer Intern' date='Aug 2023 - Dec 2023' location='Harrisonburg, VA'/>
             <TextBlock />
-            <TextBlock />
-            <TextBlock />
-            <TextBlock />
+            <TextBlock company="Eastern Mennonite University" role='Physics and Engineering Tutor' date='Aug 2022 - May 2023'/>
           </Box>
           <Box w="full" minH="100vh">
             <Heading
