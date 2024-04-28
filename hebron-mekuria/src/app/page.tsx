@@ -80,17 +80,56 @@ export default function Home() {
               <VStack>
                 <TextCard />
                 <HStack>
-                <HStack>
-                  <a href="https://github.com/hebronmekuria" target="_blank" rel="noopener noreferrer">
-                    <Image src={github} width={"70"} height={"70"} alt="GitHub" />
-                  </a>
-                  <a href="https://www.linkedin.com/in/hebron-mekuria" target="_blank" rel="noopener noreferrer">
-                    <Image src={linkedin} width={"70"} height={"70"} alt="LinkedIn" />
-                  </a>
-                  <a href="mailto:hebron.mekuria@emu.edu">
+                  <Box
+                    as="a"
+                    href="https://github.com/hebronmekuria"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    borderRadius="full"
+                    transition="transform 0.2s ease-out, shadow 0.2s ease-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                      boxShadow: "2xl",
+                    }}
+                  >
+                    <Image
+                      src={github}
+                      width={"70"}
+                      height={"70"}
+                      alt="GitHub"
+                    />
+                  </Box>
+                  <Box
+                    as="a"
+                    href="https://www.linkedin.com/in/hebron-mekuria"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    borderRadius="full"
+                    transition="transform 0.2s ease-out, shadow 0.2s ease-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                      boxShadow: "2xl",
+                    }}
+                  >
+                    <Image
+                      src={linkedin}
+                      width={"70"}
+                      height={"70"}
+                      alt="LinkedIn"
+                    />
+                  </Box>
+                  <Box
+                    as="a"
+                    href="mailto:hebron.mekuria@emu.edu"
+                    borderRadius="full"
+                    transition="transform 0.2s ease-out, shadow 0.2s ease-out"
+                    _hover={{
+                      transform: "scale(1.05)",
+                      boxShadow: "2xl",
+                    }}
+                  >
                     <Image src={email} width={"70"} height={"70"} alt="Email" />
-                  </a>
-                </HStack>
+                  </Box>
                 </HStack>
               </VStack>
             </HStack>
