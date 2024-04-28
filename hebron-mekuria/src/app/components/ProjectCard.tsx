@@ -34,15 +34,15 @@ export function ProjectCard({
             <Text
               fontWeight="semibold"
               fontSize="20px"
-              color="black" // Adjusted for better visibility
-              opacity="0.88" //
+              color="black" 
+              opacity="0.88" 
             >
               {header}
             </Text>
             <Text
               fontSize="20px"
               fontWeight="semibold"
-              color="black" // Adjusted for better visibility
+              color="black" 
               opacity="0.44"
             >
               {subtitle}
@@ -52,24 +52,12 @@ export function ProjectCard({
             <Button
               textColor="white"
               as="a"
-              href={tryit}
-              bg="#9A5CCB"
-              borderRadius="3xl"
-              w="94px"
-              h="39px"
-              target="_blank" // Optionally open in new tab
-            >
-              Try It
-            </Button>
-            <Button
-              textColor="white"
-              as="a"
               href={code}
               bg="#9A5CCB"
               borderRadius="3xl"
               w="94px"
               h="39px"
-              target="_blank" // Optionally open in new tab
+              target="_blank" 
             >
               Code
             </Button>
