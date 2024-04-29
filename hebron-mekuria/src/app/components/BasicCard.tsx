@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { Box, Text, Button, VStack, HStack } from "@chakra-ui/react";
 import Image, { StaticImageData } from "next/image";
@@ -7,10 +8,11 @@ interface BasicCardProps {
   subtitle: string;
   title: string;
   buttonUrl: string;
+  onClick: () => void;
 }
 
 export function BasicCard({
- image, subtitle, title, buttonUrl
+ image, subtitle, title, buttonUrl, onClick
 }:BasicCardProps) {
   return (
     <Box
@@ -77,7 +79,7 @@ export function BasicCard({
         <Button
           textColor="white"
           as="a"
-          href={buttonUrl}
+          // href={buttonUrl}
           bg="#9A5CCB"
           borderRadius="3xl"
           w="94px"
@@ -86,6 +88,7 @@ export function BasicCard({
           target="_blank" // Optionally open in new tab
           position="absolute"
           bottom="12px"
+          onClick={onClick}
         >
           View
         </Button>

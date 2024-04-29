@@ -24,7 +24,7 @@ export function TextBlock({
   location = "New York, NY",
   description,
 }: TextBlockProps) {
-  // Default description items if not provided
+  
   const defaultDescription = [
     <ListItem key="1">Lorem ipsum dolor sit amet</ListItem>,
     <ListItem key="2">Consectetur adipiscing elit</ListItem>,
@@ -33,7 +33,7 @@ export function TextBlock({
   ];
 
   return (
-    <VStack fontSize="20px" fontWeight="semibold" align="start" mb='20px' mt='20px' ms='30px'>
+    <VStack fontSize="20px" fontWeight="semibold" align="start" mb='50px' mt='50px' ms='30px'>
       <Text >{date}</Text>
       <HStack>
         <Text color='#9A5CCB' opacity='0.7'>{company}</Text>

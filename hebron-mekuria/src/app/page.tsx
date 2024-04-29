@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   ChakraProvider,
@@ -5,10 +6,13 @@ import {
   Img,
   Divider,
   Text,
+  ListItem,
   VStack,
   HStack,
   SimpleGrid,
 } from "@chakra-ui/react";
+
+import React, { useRef } from "react";
 
 import { BasicCard } from "./components/BasicCard";
 import { TextCard } from "./components/TextCard";
@@ -49,6 +53,11 @@ import linux from "./static/technologies/linux.png";
 import postman from "./static/technologies/postman.svg";
 import rest from "./static/technologies/rest.png";
 
+import gemini from "./static/projects/gemini.png";
+import food from "./static/projects/food.jpeg";
+import internet from "./static/projects/internethos.png";
+import colorstack from "./static/projects/colorstack.png";
+
 import professional from "./static/professional.png";
 import projects from "./static/projects.png";
 import skills from "./static/skills.png";
@@ -57,6 +66,63 @@ import { TextBlock } from "./components/TextBlock";
 import Link from "next/link";
 
 export default function Home() {
+  const professionalRef = useRef(null);
+  const projectRef = useRef(null);
+  const skillsRef = useRef(null);
+
+  const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const colorstackexp = [
+    <ListItem key="1">
+      Building a feature for 7000+ Colorstack students to share compensation
+      data to increase transparency and measure success.
+    </ListItem>,
+    <ListItem key="2">
+      Using TypeScript, PostgreSQL, and Kysely in the backend and React & Remix
+      in the frontend.
+    </ListItem>,
+  ];
+
+  const vistashareexp = [
+    <ListItem key="1">
+      Built a full-stack web feature for 300+ company clients to onboard more
+      efficiently using Django, PostgreSQL and Bootstrap.
+    </ListItem>,
+    <ListItem key="2">
+      Collaborated on a scrum-based agile development environment to
+      periodically seek feedback and iterate.
+    </ListItem>,
+  ];
+
+  const morganstanexp = [
+    <ListItem key="1">
+      Designed and built 4 REST APIs from scratch using Java Spring Boot,
+      Postman, JDBC, JUnit Testing, and a SQL Server database.
+    </ListItem>,
+    <ListItem key="2">
+      Independently defined and documented the APIs’ specific requirements,
+      features, and architecture.
+    </ListItem>,
+    <ListItem key="3">
+      Increased a trading application’s efficacy by 40%, implementing a
+      performance analysis dashboard in Angular and TypeScript.
+    </ListItem>,
+  ];
+
+  const tutorexp = [
+    <ListItem key="1">
+      Strengthened the academic confidence of minority engineering students by
+      leading weekly study sessions for 30 weeks.
+    </ListItem>,
+    <ListItem key="2">
+      Gave small-group instruction in core concepts such as Electrostatics,
+      Electromagnetism, and Thermodynamics.
+    </ListItem>,
+  ];
   return (
     <ChakraProvider>
       <Box alignContent="center">
@@ -136,28 +202,32 @@ export default function Home() {
 
             <HStack className="basic-card-bobbing" w="500px">
               <BasicCard
-                title="Professional Experience"
-                subtitle="Past internships and jobs."
-                buttonUrl="#professional"
-                image={professional}
-              />
-              <BasicCard
                 title="Projects"
                 subtitle="Compilation of my coding projects."
                 buttonUrl="projects"
                 image={projects}
+                onClick={() => scrollToRef(projectRef)}
+              />
+              <BasicCard
+                title="Professional Experience"
+                subtitle="Past internships and jobs."
+                buttonUrl="#professional"
+                image={professional}
+                onClick={() => scrollToRef(professionalRef)}
               />
               <BasicCard
                 title="Skills"
                 subtitle="List of my technical and non-technical skills."
                 buttonUrl="skills"
                 image={skills}
+                onClick={() => scrollToRef(skillsRef)}
               />
               <BasicCard
                 title="Education"
                 subtitle="My undergraduate degree, activities and courses."
                 buttonUrl="education"
                 image={education}
+                onClick={() => scrollToRef(professionalRef)}
               />
             </HStack>
           </Box>
@@ -169,18 +239,36 @@ export default function Home() {
               fontWeight="semibold"
               m="30px"
               id="projects"
+              ref={projectRef}
             >
               Projects
             </Heading>
 
             <SimpleGrid columns={2} spacingX={200}>
-              <ProjectCard></ProjectCard>
-              <ProjectCard header="oyster" subtitle="Colorstack open-source software"></ProjectCard>
-              <ProjectCard header="Internet Hospital"
-              subtitle='A virtual doctor at your fingertips!'></ProjectCard>
-              <ProjectCard header="Pantry Puzzle" subtitle="Let's reduce food waste using AI!"></ProjectCard>
-              <ProjectCard header="Major to Career Converter" subtitle="Find out what job you can land with any given college major!"></ProjectCard>
-              <ProjectCard header="Social Distancing Alarm" subtitle="Stay six-feet apart with this small alarm!"></ProjectCard>
+              <ProjectCard
+                imageUrl={gemini}
+                header="Gemini"
+                subtitle="Use AI to grade any open-ended assignment with ease."
+                code="https://github.com/hebronmekuria/GeminiHackathon"
+              ></ProjectCard>
+              <ProjectCard
+                imageUrl={colorstack}
+                header="oyster"
+                subtitle="Colorstack open-source software"
+                code="https://github.com/hebronmekuria/oyster"
+              ></ProjectCard>
+              <ProjectCard
+                imageUrl={internet}
+                header="Internet Hospital"
+                subtitle="A virtual doctor at your fingertips!"
+                code="https://github.com/TasnubaSukanna/BlackWingsHacks/blob/main/NewVSCode.zip"
+              ></ProjectCard>
+              <ProjectCard
+                imageUrl={food}
+                header="Pantry Puzzle"
+                subtitle="Let's reduce food waste using AI!"
+                code="https://github.com/andreaalopez/HackMIT2023"
+              ></ProjectCard>
             </SimpleGrid>
           </Box>
           <Box w="full" minH="100vh">
@@ -191,13 +279,31 @@ export default function Home() {
               fontWeight="semibold"
               m="30px"
               id="'professional"
+              ref={professionalRef}
             >
               Professional Experiences
-            </Heading >
-            <TextBlock company='Colorstack' role='Open-Source Contributor' date='Mar 2023 - Present' location='remote'/>
-            <TextBlock company="Vistashare" role='Software Engineer Intern' date='Aug 2023 - Dec 2023' location='Harrisonburg, VA'/>
-            <TextBlock />
-            <TextBlock company="Eastern Mennonite University" role='Physics and Engineering Tutor' date='Aug 2022 - May 2023'/>
+            </Heading>
+            <TextBlock
+              company="Colorstack"
+              role="Open-Source Contributor"
+              date="Mar 2023 - Present"
+              location="remote"
+              description={colorstackexp}
+            />
+            <TextBlock
+              company="Vistashare"
+              role="Software Engineer Intern"
+              date="Aug 2023 - Dec 2023"
+              location="Harrisonburg, VA"
+              description={vistashareexp}
+            />
+            <TextBlock description={morganstanexp} />
+            <TextBlock
+              company="Eastern Mennonite University"
+              role="Physics and Engineering Tutor"
+              date="Aug 2022 - May 2023"
+              description={tutorexp}
+            />
           </Box>
           <Box w="full" minH="100vh">
             <Heading
@@ -207,6 +313,7 @@ export default function Home() {
               fontWeight="semibold"
               m="30px"
               id="skills"
+              ref={skillsRef}
             >
               Skills
             </Heading>
@@ -274,7 +381,7 @@ export default function Home() {
               <SkillsCard icon={rest} label="RESTful Services" />
             </SimpleGrid>
           </Box>
-          <Box w="full" minH="100vh">
+          {/* <Box w="full" minH="100vh">
             <Heading
               mt="30px"
               as="h1"
@@ -285,7 +392,7 @@ export default function Home() {
             >
               Education
             </Heading>
-          </Box>
+          </Box> */}
         </TracingBeam>
       </Box>
     </ChakraProvider>
